@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Satellite Change Detection</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+    <h1>AI Change Detection</h1>
+
+    <div class="container">
+        <!-- BEFORE IMAGE -->
+        <div class="upload-box" onclick="document.getElementById('beforeImage').click()">
+            <h3 id="beforeLabel">Before Image</h3>
+            <img id="beforePreview" class="preview" />
+            <input
+                type="file"
+                id="beforeImage"
+                accept=".tif,.tiff,.png,.jpg,.jpeg"
+                hidden
+            />
+        </div>
+
+        <!-- AFTER IMAGE -->
+        <div class="upload-box" onclick="document.getElementById('afterImage').click()">
+            <h3 id="afterLabel">After Image</h3>
+            <img id="afterPreview" class="preview" />
+            <input
+                type="file"
+                id="afterImage"
+                accept=".tif,.tiff,.png,.jpg,.jpeg"
+                hidden
+            />
+        </div>
+    </div>
+
+    <button id="analyzeBtn">Analyse</button>
+
+    <!-- Terminal / Log Panel -->
+    <div id="terminal">
+        <div class="terminal-line info">Waiting for analysis…</div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
